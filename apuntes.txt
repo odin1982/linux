@@ -316,6 +316,37 @@ $ ls -l /bin/usr &> ls-output.txt		---->	we use the single notation &>, redirect
 
 
 
+
 .:::: Redirecting Standard Input ::::.
+
+"less"  se usa para ver archivos con paginación con "cat" tambien lo puedes ver pero es menos amable a la vista
+
+.::CAT - Concatenate Files ::.
+
+The cat command reads one or more files and copies them to standard output
+
+
+Cat sin argumentos te deja escribir en la terminal, no tiene ningun uso si lo usas tal cual, su uso es cuando escribes algo y lo quieres enviar a un archivo
+
+$ cat								----> Te deja introducir texto en la terminal
+Control + D							----> Salir de cat
+$ cat archivo.txt					----> Puedes ver el contenido de un archivo sin paginación
+$ cat archivo1.txt archivo2.txt		----> Muestra información de los dos archivos.
+$ cat > archivo1.txt				----> Te deja escribir en la terminal y lo envia al archivo1.txt
+$ cat < archivo1.txt				----> Encia le contenido a la terminal.
+
+
+
+
+
+
+.:::: Pipelines ::::.
+
+The ability of commands to read data from standard input and send to standar output is utilized by a shell feature called pipelines.
+
+
+
+
+
 
 
