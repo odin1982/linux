@@ -1,0 +1,321 @@
+AVANCE				----> 81-Redirecting Standard Input
+
+COMMANDS
+
+$ date				----> muestra la fecha actual
+$ cal				----> muestra calendario
+$ df				----> cantidad de espacio libre de los discos duros
+$ free				----> cantidad de memoria libre
+$ exit				----> salir de la terminal.
+
+SHELL or BASH
+	Program that takes keyboard commands and passes them to the operating system to carry out.
+
+
+========================================================================================================================
+NAVIGATION
+========================================================================================================================
+
+* pwd	----> Print name of current working directory
+* cd 	----> Change directory
+* ls 	----> List directory contents
+
+ABSOLUTE PATHNAMES
+
+An absolute pathname begins with the root directory and follows the tree branch by
+branch until the path to the desired directory or file is completed
+
+/usr/bin
+	Directory on your system in which most of your system's programs are installed
+
+Relative Pathnames
+
+
+Where an absolute pathname starts from the root directory and leads to its destination, a
+relative pathname starts from the working directory. To do this, it uses a couple of special
+symbols to represent relative positions in the file system tree. These special symbols are
+"." (dot) and ".." (dot dot).
+
+The "." symbol refers to the working directory and the ".." symbol refers to the working
+directory's parent directory.
+
+
+$ cd -			---->	Cambia al siguiente nivel previo.
+$ ls -a			---->	Muestra el contenido de archivos del directorio mas archivos ocultos.
+
+========================================================================================================================
+EXPLORING THE SYSTEM
+========================================================================================================================
+
+* ls				---->	List directory contents
+* file				---->	Determine file type
+* less				---->	View file contents
+
+
+$ ls ~ /usr			---->	list both directories ~ and /usr
+$ ls -l				---->	list output long format
+$ ls -lt			---->	sort result by the file modification
+$ ls -lt --reverse	---->	reverse the order of the sort
+
+
+-rw-r--r--			---->	access rights
+1					---->	file's number of hard links
+root				---->	the username of the files owner
+root				---->	the name of the group which owns the file
+32059				---->	size of the file in bytes
+2007-04-03 11:05	---->	date and time of the file's last modification
+file.txt			---->	name of the file
+
+
+
+COMMAND file
+	A brief description of the file's contents
+
+$file				---->	brief description file
+
+
+COMMAND less
+	is a program to view text files.
+
+/etc/passwd
+	File that defines all the system's user accounts
+
+========================================================================================================================
+MANIPULATING FILES AND DIRECTORIES
+========================================================================================================================
+
+* cp – Copy files and directories
+* mv – Move/rename files and directories
+* mkdir – Create directories
+* rm – Remove files and directories
+* ln – Create hard and symbolic links
+
+
+Wildcard Meaning
+* 					Matches any characters
+? 					Matches any single character
+[characters] 		Matches any character that is a member of the set characters
+[!characters] 		Matches any character that is not a member of the set characters
+[[:class:]] 		Matches any character that is a member of the specified class
+
+Character Class Meaning
+[:alnum:] 			Matches any alphanumeric character
+[:alpha:] 			Matches any alphabetic character
+[:digit:] 			Matches any numeral
+[:lower:] 			Matches any lowercase letter
+[:upper:] 			Matches any uppercase letter
+
+
+
+$ mkdir dir1										---->	crea un directorio con nombre dir1
+$ mkdir dir1 dir2 dir3								---->	crea 3 directorios
+
+
+COPYING FILES
+
+We can use the CP command
+
+$ cp /etc/passd .									----> Copia el archivo passd al directorio actual donde estemos, 
+														  el punto significa directorio actual.
+$ cp -v /etc/passwd .								----> La v significa verbose y significa que te va a dar detalle de 
+														  lo que estamos haciendo.
+$ cp -i /etc/passw .								----> i = interactive , sirve para mandar mensajes de alerta si estas 
+														  sobreescribiendo.
+
+
+
+MOVING AND RENAMING FILES
+
+$ mv passwd fun										----> Cambia el nombre de algun directorio o archivo, en este caso passwd lo cambia a fun
+
+
+
+MANIPULATING FILES AND DIRECTORIES
+
+$ mv fun dir1										----> mueve "fun" al directorio "dir1"
+$ mv dir1/fun dir2									----> mueve "fun" que se encuentra en el directorio "dir1" al directorio "dir2"
+$ mv dir2/fun . 									----> mueve "fun" que se encuentra en el directorio "dir2" al directorio actual donde estamos
+
+
+
+
+CREATING HARD LINKS(Son como accesos directos)
+
+$ ln fun fun-hard
+$ ln fun dir1/fun-hard
+$ ln fun dir2/fun-hard
+
+Si se revisa el directorio apareceran dos archivos con un 4 esto indica que es un hard link
+
+-rw-r--r-- 1 joker2 joker2   24 ago 13 03:49 archivo1.txt
+drwxr-xr-x 2 joker2 joker2 4.0K ago 13 04:12 dir2
+drwxr-xr-x 2 joker2 joker2 4.0K ago 13 04:12 directorio1
+-rw-r--r-- 4 joker2 joker2 2.5K ago  7 21:41 fun
+-rw-r--r-- 4 joker2 joker2 2.5K ago  7 21:41 fun-hard
+-rw-r--r-- 1 joker2 joker2 2.5K ago 13 03:40 passwd
+
+Para ser mas claros podemos usar el comando 
+
+$ ls -li											----> el primer valor es el inode number
+
+393226 -rw-r--r-- 1 joker2 joker2   24 ago 13 03:49 archivo1.txt
+394883 drwxr-xr-x 2 joker2 joker2 4096 ago 13 04:12 dir2
+394882 drwxr-xr-x 2 joker2 joker2 4096 ago 13 04:12 directorio1
+394884 -rw-r--r-- 4 joker2 joker2 2542 ago  7 21:41 fun
+394884 -rw-r--r-- 4 joker2 joker2 2542 ago  7 21:41 fun-hard
+393224 -rw-r--r-- 1 joker2 joker2 2542 ago 13 03:40 passwd
+
+
+
+
+
+CREATING SYMBOLIC LINKS
+
+Symbolic links were created to overcome the two disadvantages of hard links: Hard links
+cannot span physical devices and hard links cannot reference directories, only files. Sym-
+bolic links are a special type of file that contains a text pointer to the target file or direc-
+tory.
+
+$ ln -s fun fun-sym
+$ ln -s ../fun directorio1/fun-sym
+
+
+
+Removing Files And Directories
+
+As we covered earlier, the rm command is used to delete files and directories.
+
+rm [directory name or file name]					----> Elimina un directorio o archivo
+rm -i [directory or file]							----> Elimina archivo o driectorio pero mostrandote una advertencia si lo quieres borrar o no
+
+
+
+WORKING WITH COMMANDS
+
+* type – Indicate how a command name is interpreted
+* which – Display which executable program will be executed
+* help – Get help for shell builtins
+* man – Display a command's manual page
+* apropos – Display a list of appropriate commands
+* info – Display a command's info entry
+* whatis – Display a very brief description of a command
+* alias – Create an alias for a command
+
+
+COMMAND TYPE
+
+The type command is a shell builtin that displays the kind of command the shell will
+execute, given a particular command name.
+
+
+WHICH – Display An Executable's Location
+
+Te indica donde se puede encotrar ese comando, y solo funciona para comandos ejecutables.
+Sometimes there is more than one version of an executable program installed on a sys-
+tem. While this is not very common on desktop systems, it's not unusual on large servers.
+To determine the exact location of a given executable, the which command is used
+
+which only works for executable programs, not builtins nor aliases that are substitutes
+for actual executable programs. When we try to use which on a shell builtin, for exam-
+ple, cd, we either get no response or an error message.
+
+HELP
+
+Te da la explicacion de algun comando en especial.
+
+$ help cd											----> te da una explicacion del comando cd.
+$ mkdir --help										----> te da una descripcion de las diferentes sintaxis que puedes usar con mkdir.
+
+
+MAN
+
+Muestar un manual de como usar el comando
+
+
+APROPOS – Display Appropriate Commands
+It is also possible to search the list of man pages for possible matches based on a search
+term. It's very crude but sometimes helpful.
+
+
+WHATIS – Display A Very Brief Description Of A Command
+The whatis program displays the name and a one line description of a man page match-
+ing a specified keyword
+
+
+
+.gz
+
+Incates that files are compressed with GZIP
+
+
+.: ABRIR PDF :.
+
+evince [nombre-pdf]
+
+
+.: ALIAS :.(nota:esta forma de crear alias es temporal cuando cierres tu terminal desapareceran los alias)
+
+
+											$ alias tutorial-linux='cd Documentos/odin/books'
+											$ alias [nombre-alias]='instruccion-a-ejecutar'
+
+ver la definicion del alias
+
+											$ type [nombre-alias]
+
+eliminar alias
+
+											$ unalias [nombre-alias]
+
+ver todos los alias definidos
+
+											$ alias
+
+
+
+
+.:::::::::: REDIRECTION ::::::::::.
+
+● cat - Concatenate files
+● sort - Sort lines of text
+● uniq - Report or omit repeated lines
+● grep - Print lines matching a pattern
+● wc - Print newline, word, and byte counts for each file
+● head - Output the first part of a file
+● tail - Output the last part of a file
+● tee - Read from standard input and write to standard output and files
+
+
+.:::: Redirecting Standard Output ::::.
+
+$ ls -lh Documentos/odin/ books > ls-output.txt					----> La salida de ls la envia al archivo ls-output.txt si
+																	  no existe lo crea.
+
+simbolo  ">"  sobreescribe el archivo
+simbolo  ">>" agrega contenido al archivo
+
+$ ls -lh Documentos/odin/ books >> ls-output.txt				----> Agrega la salida de ls al archivo
+
+
+
+.:::: Redirecting Standard Error ::::.
+
+To redirect standard error we must refer to its file descriptor. A program can produce output on any of 
+several numbered of streams.
+
+THe shell has 3 file descriptors: 0,1 y 2.
+
+$ ls - l /bin/usr 2> ls-error.txt
+
+
+
+.:::: Redirecting Standard Output And Standard Error To One File ::::.
+
+$ ls -l /bin/usr &> ls-output.txt		---->	we use the single notation &>, redirect both standard output and 
+												standard error to the file ls-output.txt
+
+
+
+.:::: Redirecting Standard Input ::::.
+
+
