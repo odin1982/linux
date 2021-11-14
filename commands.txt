@@ -1,6 +1,14 @@
 LINUX
 SIMPLE COMMANDS
-$date   --> display date
-$cal    --> display calendar
-$df     --> free space disk drives
-$pwd    --> current directory
+$ date  --> display date
+$ cal   --> display calendar
+$ df    --> free space disk drives
+$ pwd   --> current directory
+
+$ ls    --> listing the contents of a directory
+$ ls -a --> listing the contents of a directory and hidden files
+
+$ cd    --> changing the working directory
+$ cd -  --> change to the previous directory
+$ cd ~  --> change to the home directory
+$ cd ~[user-name]   --> change to the indicated user directory
