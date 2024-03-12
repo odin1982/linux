@@ -18,7 +18,16 @@ Son caracteres especiales que nos ayudan a especificar grupos de nombres de arch
 * [!characters] matches any character that is not a member of the set characters
 * [[:class]]    matches any character that is a member of the specified class
 
-avance: pag25 wildcards
+### mkdir - Create Directories
+    The mkdir command is used to create directories.
+
+    ejemplo:
+        mkdir dir1
+        mkdir dir1 dir2 dir3
+
+### cp - Copy files and directories
+    The cp command copies files or directories. It can be used two different ways.
+    
 
 
 
