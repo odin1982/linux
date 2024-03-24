@@ -27,6 +27,11 @@ Son caracteres especiales que nos ayudan a especificar grupos de nombres de arch
 
 ### cp - Copy files and directories
     The cp command copies files or directories. It can be used two different ways.
+
+### mv - move and rename files
+    The mv command performs both file moving and file renaming, depending on how it is used.
+
+### avance ln – Create Links
     
 
 
