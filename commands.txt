@@ -24,5 +24,6 @@ $ ls -lt --reverse
 $ ls -lt -r					--> muestra los archivos de acuerdo a su fecha de mas viejos a mas nuevos
 $ file [nombre-directorio|nombre-archivo]	--> te muestra el tipo de archivo que es
 $ less [archivo-texto]				--> muestra contenido de archivos de texto
-
+cp                          --> copia archivos
+mv                          --> mueve archivos o cambia de nombre los archivos o directorios
 

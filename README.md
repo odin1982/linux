@@ -31,7 +31,16 @@ Son caracteres especiales que nos ayudan a especificar grupos de nombres de arch
 ### mv - move and rename files
     The mv command performs both file moving and file renaming, depending on how it is used.
 
-### avance ln – Create Links
+### ln - create links
+    The ln command is used to create either hard or symbolic links. It is used in one of two ways:
+
+    ln file link
+
+    to create a hard link:
+
+    ln -s item link   
+
+### avance pag37 - Creating Hard Links
     
 
 
