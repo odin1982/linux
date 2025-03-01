@@ -52,7 +52,29 @@ posicion 567 = files's group
 posicion 8910 = everyone else
     
 
+### creating hard links
+Los Hard Links son útiles cuando necesitas múltiples nombres para el mismo archivo sin duplicar datos. Son especialmente usados en sistemas de respaldo o cuando quieres evitar la pérdida de datos accidentalmente.
 
+- vamos a crear un archivo y verificar su inodo
+```
+$ nano archivo.txt
+$ ls -li archivo.txt
+```
+El inodo es el numero al inicio en este caso 11655
+```
+11655 -rw-r--r-- 2 v1k1ngg0d v1k1ngg0d 30 Feb 28 23:15 archivo.txt
+```
+- crearemos un hard link
+```
+$ ln archivo.txt enlace-duro.txt
+```
+Ahora lso dos archivos comparten el mismo inodo
+```
+11655 -rw-r--r-- 2 v1k1ngg0d v1k1ngg0d 30 Feb 28 23:15 archivo.txt
+11655 -rw-r--r-- 2 v1k1ngg0d v1k1ngg0d 30 Feb 28 23:15 enlace-duro.txt
+```
+
+Si haces un cambio en archivo.txt se vera reflejado en enlace-duro.txt
 
 
 
