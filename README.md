@@ -1,4 +1,4 @@
-# LINUX
+# LINUX PAG 34 LETS BUILD A PLAYGROUND
 ## SHELL
 > Programa que acepta comandos y se los pasa al sistema operativo para que los ejecute
 
@@ -40,7 +40,16 @@ Son caracteres especiales que nos ayudan a especificar grupos de nombres de arch
 
     ln -s item link   
 
-### avance pag37 - Creating Hard Links
+### lectura de lo que muestra el comando ls
+-rw-r--r-- 1 v1k1ngg0d v1k1ngg0d 1379 Feb 15 20:27 README.md
+drwxr-xr-x 2 v1k1ngg0d v1k1ngg0d 4096 Feb 15 20:27 book
+
+posicion_1: indica el tipo de archivo
+	- = archivo regular
+	d = directorio
+posicion 234 = permisos de acceso
+posicion 567 = files's group
+posicion 8910 = everyone else
     
 
 
