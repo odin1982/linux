@@ -28,3 +28,7 @@ $ less [archivo-texto]				--> muestra contenido de archivos de texto
 cp                          --> copia archivos
 mv                          --> mueve archivos o cambia de nombre los archivos o directorios
 
+rm <fileNAme>                       --> elimina un archivo, para folder se usa otra opcion
+rm -i <fileName>                    --> elimina un archivo, con al diferencia que te va preguntando y enseñando todo el proceso de borrado del archivo
+rm -r <directory>                   --> elimina directorios, subdirectorios y archivos 
+
