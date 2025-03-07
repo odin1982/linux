@@ -76,5 +76,27 @@ Ahora lso dos archivos comparten el mismo inodo
 
 Si haces un cambio en archivo.txt se vera reflejado en enlace-duro.txt
 
+## WORKING WITH COMMANDS
+### creating your own commands with alias
+It's possible to put more than one command on a line by separating each command with a semicolon character
+```
+cd ejercicios-practica/;ls
+```
 
+Creating alias:
+```
+$ alias foo='cd ejercicios-practica/;ls'
+```
+
+Remove alias:
+```
+$ unalias <alias-name>
+```
+
+To see all the alias
+```
+$ alias
+```
+
+Cuando termines la sesion de la terminal se borraran los alias
 
