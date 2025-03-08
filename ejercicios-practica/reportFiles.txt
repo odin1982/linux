@@ -1,0 +1,14 @@
+total 4
+-rwxrwxrwx 1 v1k1ngg0d v1k1ngg0d   30 Mar  6 21:20 archivo.txt
+-rwxrwxrwx 1 v1k1ngg0d v1k1ngg0d    0 Mar  6 21:20 archivo1.txt
+-rwxrwxrwx 1 v1k1ngg0d v1k1ngg0d    5 Mar  6 21:20 archivo2.txt
+-rwxrwxrwx 1 v1k1ngg0d v1k1ngg0d   30 Mar  6 21:20 enlace-duro.txt
+-rwxrwxrwx 1 v1k1ngg0d v1k1ngg0d   12 Mar  6 21:20 enlace-simbolico.txt
+drwxrwxrwx 1 v1k1ngg0d v1k1ngg0d 4096 Mar  6 21:20 folderA
+drwxrwxrwx 1 v1k1ngg0d v1k1ngg0d 4096 Mar  6 21:20 folderB
+drwxrwxrwx 1 v1k1ngg0d v1k1ngg0d 4096 Mar  6 21:20 folderC
+drwxrwxrwx 1 v1k1ngg0d v1k1ngg0d 4096 Mar  6 21:20 folderEnlaceSimbolico
+-rwxrwxrwx 1 v1k1ngg0d v1k1ngg0d    0 Mar  8 14:30 reportFiles.txt
+total 0
+-rwxrwxrwx 1 v1k1ngg0d v1k1ngg0d 11 Mar  6 21:20 Equipo.java
+-rwxrwxrwx 1 v1k1ngg0d v1k1ngg0d 11 Mar  6 21:20 archivo.txt

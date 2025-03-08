@@ -1,4 +1,4 @@
-# LINUX PAG 34 LETS BUILD A PLAYGROUND
+# LINUX PAG 53 Redirection
 ## SHELL
 > Programa que acepta comandos y se los pasa al sistema operativo para que los ejecute
 
@@ -100,3 +100,28 @@ $ alias
 
 Cuando termines la sesion de la terminal se borraran los alias
 
+## REDIRECTIONS
+
+● cat - Concatenate files
+● sort - Sort lines of text
+● uniq - Report or omit repeated lines
+● grep - Print lines matching a pattern
+● wc - Print newline, word, and byte counts for each file
+● head - Output the first part of a file
+● tail - Output the last part of a file
+● tee - Read from standard input and write to standard output and files
+
+### Redirecting Standard Output (Como guardar salidas de comandos en un archivo) >
+Cualquier comando que mande una salida se puede guardar en un archivo con el operador de redireccion >
+
+```
+ls -l > reportFiles.txt
+```
+![Descripción de la imagen](/images/Screenshot_1.png)
+
+El operador agrega contenido al archivo no sobreescribe como el operador >
+
+```
+ls -l >> reportFiles.txt
+```
+![Descripción de la imagen](/images/Screenshot_2.png)
