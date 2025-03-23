@@ -125,3 +125,12 @@ El operador agrega contenido al archivo no sobreescribe como el operador >
 ls -l >> reportFiles.txt
 ```
 ![Descripción de la imagen](/images/Screenshot_2.png)
+
+### Redirecting Standard Error
+Para guardar un error al ejecutar un comando se puede hacer de la siguiente forma
+```
+ls /directorio_no_existente 2> error.txt
+```
+Al querer mostrar los archivos de un directorio inexistente linux te envia un error, este error se guardara en el archivo error.txt
+
+
