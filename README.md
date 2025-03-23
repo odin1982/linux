@@ -129,7 +129,17 @@ ls -l >> reportFiles.txt
 ### Redirecting Standard Error
 Para guardar un error al ejecutar un comando que produce este error,  se puede hacer de la siguiente forma
 ```
+ls <instruccion> 2> <filename-output>
 ls /directorio_no_existente 2> error.txt
 ```
 Al querer mostrar los archivos de un directorio inexistente linux te envia un error, este error se guardara en el archivo error.txt
 ![Descripción de la imagen](/images/Screenshot_2.png)
+
+### Redirecting Standard Output And Standard Error To One file
+Para guardar la salida del comando mas el error se ejecuta lo siguiente:
+```
+ls <instruccion> <filename-output> 2>&1
+ls folderA/ /directorio_no_existente > salida.txt 2>&1
+```
+![Descripción de la imagen](/images/Screenshot_3.png)
+

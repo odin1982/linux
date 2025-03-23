@@ -1,0 +1,4 @@
+ls: cannot access '/directorio_no_existente': No such file or directory
+folderA/:
+Equipo.java
+archivo.txt
